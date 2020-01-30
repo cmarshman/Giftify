@@ -2,19 +2,19 @@
 var orm = require("../config/orm.js");
 
 var gift = {
-  selectAll: function(cb) {
-    orm.selectAll("gifts", function(res) {
+  all: function(cb) {
+    orm.all("gifts", function(res) {
       cb(res);
     });
   },
   // The variables cols and vals are arrays.
-  insert: function(cols, vals, cb) {
-    orm.insert("gifts", cols, vals, function(res) {
+  create: function(cols, vals, cb) {
+    orm.create("gifts", cols, vals, function(res) {
       cb(res);
     });
   },
-  remove: function(objColVals, condition, cb) {
-      orm.remove("gifts", objColVals, condition, function(res) {
+  delete: function(objColVals, condition, cb) {
+      orm.delete("gifts", objColVals, condition, function(res) {
           cb(res);
       });
   }

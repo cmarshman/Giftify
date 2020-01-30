@@ -7,7 +7,7 @@ var gift = require("../models/gift.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
-    gift.selectAll(function (data) {
+    gift.all(function (data) {
         var hbsObject = {
             gifts: data
         };
@@ -17,16 +17,16 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/gifts", function (req, res) {
-    gift.insert(["gift_name", "gift_sum", "price"], [req.body.gift_name, req.body.gift_sum, req.body.price], function (result) {
+    gift.create(["gift_name", "gift_sum", "price"], [req.body.gift_name, req.body.gift_sum, req.body.price], function (result) {
         // Send back the ID of the new quote
         res.json({ id: result.insertId });
     });
 });
 
-router.remove("/api/gifts/:id", function (req, res) {
+router.delete("/api/gifts/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
-    gift.remove(condition, function (result) {
+    gift.delete(condition, function (result) {
         if (result.affectedRows == 0) {
             // If no rows were changed, then the ID must not exist, so 404
             return res.status(404).end();
