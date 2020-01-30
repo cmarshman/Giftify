@@ -1,2 +1,5 @@
-DROP DATABASE IF EXISTS 'project2';
-CREATE DATABASE 'project2';
+DROP DATABASE IF EXISTS usersGift;
+
+create database usersGift;
+
+use usersGift;
