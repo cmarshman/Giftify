@@ -1,4 +1,10 @@
-### Schema
+
+DROP DATABASE IF EXISTS usersGift;
+
+create database usersGift;
+
+use usersGift;
+
 
 DROP DATABASE IF EXISTS gifts_db;
 
