@@ -13,11 +13,6 @@ var gift = {
       cb(res);
     });
   },
-  update: function(objColVals, condition, cb) {
-    orm.update("gifts", objColVals, condition, function(res) {
-      cb(res);
-    });
-  },
   remove: function(objColVals, condition, cb) {
       orm.remove("gifts", objColVals, condition, function(res) {
           cb(res);
