@@ -25,3 +25,13 @@ a {
 #tile {
     margin: 0 auto;
 }
+
+button {
+    background-color: rgb(129, 129, 172);
+    padding: 10px;
+    margin: 2%;
+    border-radius: 25%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 25px;
+}
