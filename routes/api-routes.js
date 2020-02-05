@@ -47,3 +47,43 @@ module.exports = function(app) {
     }
   });
 };
+
+module.exports = function(app) {
+
+  // GET route for getting all of the todos
+  app.get("/api/gifts", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.GiftList.findAll({}).then(function(result) {
+      // We have access to the giftsList as an argument inside of the callback function
+      res.json(result);
+    });
+  });
+
+  // POST route for saving a new todo
+  app.post("/api/gifts", function(req, res) {
+    console.log(req.body);
+    // create takes an argument of an object describing the item we want to
+    // insert into our table. In this case we just we pass in an object with a text
+    // and complete property (req.body)
+    db.GiftList.create({
+      gift_name: req.body.gift_name
+    }).then(function(result) {
+      // We have access to the new giftlist as an argument inside of the callback function
+      res.json(result);
+    });
+  });
+
+  // DELETE route for deleting gifts. We can get the id of the gift we want to delete from
+  // req.params.id
+  app.delete("/api/gifts/:id", function(req, res) {
+        // We just have to specify which gift we want to destroy with "where"
+        db.GiftsList.destroy({
+          where: {
+            id: req.params.id
+          }
+        }).then(function(result) {
+          res.json(result);
+        });
+    
+  });
+};
