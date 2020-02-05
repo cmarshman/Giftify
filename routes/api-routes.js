@@ -74,7 +74,7 @@ module.exports = function (app) {
   // req.params.id
   app.delete("/api/gifts/:id", function (req, res) {
     // We just have to specify which gift we want to destroy with "where"
-    db.GiftsList.destroy({
+    db.GiftList.destroy({
       where: {
         id: req.params.id
       }

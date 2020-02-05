@@ -29,12 +29,11 @@
             </div>
           </section>
           <section>
-            <div class="field has-addons">
-              <div class="control is-expanded">
-                <div class="giftBtns" id="giftVal">
-                </div>
-              </div>
-            </div>
+            <ul>
+              {{#each GiftList}}
+              {{> GiftList/gift-block }}
+              {{/each}}
+            </ul>
           </section>
 
         </div>
