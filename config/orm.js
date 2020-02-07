@@ -35,7 +35,7 @@ function printQuestionMarks(num) {
   // Object for all our SQL statement functions.
   var orm = {
     all: function(tableInput, cb) {
-      var queryString = "SELECT * FROM " + tableInput + ";";
+      var queryString = "SELECT amount FROM " + tableInput + " ORDER By amount DESC LIMIT 5;";
       connection.query(queryString, function(err, result) {
         if (err) {
           throw err;
