@@ -41,3 +41,6 @@ button {
     text-transform: capitalize;
     font-size: 25px;
 }
+#recent {
+    font-size: 20px;
+}

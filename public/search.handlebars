@@ -58,23 +58,39 @@
           <section>
             <div class="field has-addons">
               <div class="control is-expanded">
-                <input class="input" id="inputInfo" type="text" placeholder="Search for your unique gift here.">
+                <input class="input" id="inputInfo" onfocus="this.value=''" type="text" placeholder="Search for your unique gift here.">
               </div>
               <div class="control">
-                <a class="button is-black" id="gift_search">
+                <button class="button is-black btnSearch" id="gift_search">
                   Search
-                </a>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section>
+            <br>
+            <div id="recent">
+            <h1>Recent Searches</h1>
+            </div>
+            <div class="field has-addons">
+              <div class="control is-expanded">
+                <div class="giftBtns" id="giftVal">
+                </div>
               </div>
             </div>
           </section>
           <section>
             <ul>
               {{#each GiftList}}
-              {{> GiftList/gift-block }}
+              <li>
+                <p><span class="label">Gift:</span> {{gift_name}}</p>
+
+                {{!-- <button data-id="{{this.gift_name}}" class="giftAdded">{{this.gift_name}}</button> --}}
+                <button data-id="{{id}}" class="delgift">Delete</button>
+              </li>
               {{/each}}
             </ul>
           </section>
-
         </div>
         <br>
         <p class="title">Featured Gifts</p>
@@ -291,6 +307,7 @@
     </div>
   </div>
 </div>
+<script src="./js/script.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/script.js"></script>
@@ -309,3 +326,4 @@
   });
 });
 </script>
+
