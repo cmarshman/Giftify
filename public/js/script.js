@@ -27,6 +27,7 @@ $(function () {
     var newGift = {
       gift_name: $("#inputInfo").val(),
     };
+    getDataFromEtsyApi();
 
     // Send the POST request.
     $.ajax("/api/gifts", {
