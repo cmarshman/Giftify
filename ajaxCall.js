@@ -47,7 +47,7 @@ function displayEtsySearchData(data) {
             event.preventDefault();
             searchTerm = document.getElementById('inputInfo').value;
             console.log(searchTerm);
-            getDataFromEtsyApi(searchTerm, displayEtsySearchData)
+            getDataFromEtsyApi(searchTerm, displayEtsySearchData);
 
         })
     }
