@@ -32,4 +32,4 @@ module.exports = function(app) {
     // ../public/app.html
   });
 
-};
+}
