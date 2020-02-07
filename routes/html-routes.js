@@ -12,7 +12,7 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/app");
     }
-    res.render(path.join(__dirname, "../public/index.handlebars"));
+    res.render(path.join(__dirname, "../public/search.handlebars"));
     // ../public/signup.html
   });
 

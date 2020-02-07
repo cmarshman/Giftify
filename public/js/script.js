@@ -27,7 +27,7 @@ $(function () {
     var newGift = {
       gift_name: $("#inputInfo").val(),
     };
-    getDataFromEtsyApi();
+    // getDataFromEtsyApi();
 
     // Send the POST request.
     $.ajax("/api/gifts", {
@@ -37,7 +37,7 @@ $(function () {
       function () {
         console.log("created new gift");
         // Reload the page to get the updated list
-        location.reload();
+        // location.reload();
       }
     );
   });
@@ -52,7 +52,7 @@ $(function () {
       function () {
         console.log("deleted id ", id);
         // Reload the page to get the updated list
-        location.reload();
+        // location.reload();
       }
     );
   });
