@@ -35,8 +35,12 @@ module.exports = function(app) {
     // ../public/app.html
   });
 
+<<<<<<< HEAD
+}
+=======
   app.get("/top50", isAuthenticated, function(req,res){
     res.render(path.join(__dirname,"../views/top50items.handlebars"));
   })
 
 };
+>>>>>>> 7c185d376569cfaf7e68faeafeca941f5ea49b90

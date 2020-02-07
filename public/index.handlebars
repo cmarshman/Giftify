@@ -5,33 +5,40 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
+  <div class="columns is-mobile  container">
+    <div class="column is-half is-offset-one-quarter">
+      <div class="field">
+        <label style="text-align: center;" class="label">Sign Up </label>
+
         <form class="signup">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
+            <label class="label" for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control  input is-success" id="email-input" placeholder="Email">
           </div>
+          <br>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
+            <label class="label" for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control  input" id="password-input" placeholder="Password">
           </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+          {{!-- <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
+          </div> --}}
+          <br>
+          <br>
+          <button type="submit" class="btn btn-default  button is-primary">Sign Up</button>
+        </form> 
         <br />
-        <p>Or log in <a href="/login">here</a></p>
+        <p>Or log in <a style="color: green;" href="/login">here</a></p>
       </div>
     </div>
   </div>
 
+  <img class="image is-250x250" style="margin-left: 450px;" src="https://media.giphy.com/media/5Y2bU7FqLOuzK/giphy.gif" alt="gifts">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="js/signup.js"></script>
+  <link rel="stylesheet" href="./stylesheets/style.css">
 
 {{!-- js/signup.js --}}
