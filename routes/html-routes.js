@@ -12,7 +12,7 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/app");
     }
-    res.render(path.join(__dirname, "../public/search.handlebars"));
+    res.render(path.join(__dirname, "../public/index.handlebars"));
     // ../public/signup.html
   });
 
@@ -25,6 +25,9 @@ module.exports = function(app) {
     res.render(path.join(__dirname, "../public/login.handlebars"));
     // ../public/login.html
   });
+  app.get("/app", isAuthenticated, function(req,res){
+    res.render(path.join(__dirname,"../public/search.handlebars"))
+  });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
@@ -34,10 +37,8 @@ module.exports = function(app) {
       });
     // ../public/app.html
   });
-
-
+  
   app.get("/top50", isAuthenticated, function(req,res){
-    res.render(path.join(__dirname,"../views/top50items.handlebars"));
-  })
-
-};
+      res.render(path.join(__dirname,"../views/top50items.handlebars"));
+    });
+  }
