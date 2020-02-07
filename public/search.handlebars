@@ -1,3 +1,42 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#search">
+        <p class="subtitle has-text-centered" id="text">Giftify</p>
+        
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Search
+        </a>
+  
+        <a class="navbar-item">
+          Top 50 Gifts
+        </a>
+  
+        
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light">
+              Log out
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
 <section class="hero is-dark is-fullheight">
   <div class="hero-body" id="hero_picture">
     <div class="container has-text-centered is-dark">
@@ -19,23 +58,39 @@
           <section>
             <div class="field has-addons">
               <div class="control is-expanded">
-                <input class="input" id="inputInfo" type="text" placeholder="Search for your unique gift here.">
+                <input class="input" id="inputInfo" onfocus="this.value=''" type="text" placeholder="Search for your unique gift here.">
               </div>
               <div class="control">
-                <a class="button is-black" id="gift_search">
+                <button class="button is-black btnSearch" id="gift_search">
                   Search
-                </a>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section>
+            <br>
+            <div id="recent">
+            <h1>Recent Searches</h1>
+            </div>
+            <div class="field has-addons">
+              <div class="control is-expanded">
+                <div class="giftBtns" id="giftVal">
+                </div>
               </div>
             </div>
           </section>
           <section>
             <ul>
               {{#each GiftList}}
-              {{> GiftList/gift-block }}
+              <li>
+                <p><span class="label">Gift:</span> {{gift_name}}</p>
+
+                {{!-- <button data-id="{{this.gift_name}}" class="giftAdded">{{this.gift_name}}</button> --}}
+                <button data-id="{{id}}" class="delgift">Delete</button>
+              </li>
               {{/each}}
             </ul>
           </section>
-
         </div>
         <br>
         <p class="title">Featured Gifts</p>
@@ -72,7 +127,7 @@
                 <br>
                 <p class="subtitle">Insta Pot Pressure Cooker</p>
                 <p>Cook a healthy dinner in minutes. The multicookers are electronically controlled, combined pressure
-                  cookers and slow cookers. Combines 6-in-1 or more appliances to consolidate the cooking and preparing.
+                  cookers and slow cookers. Combines 6-in-1 to consolidate the cooking and preparing.
                 </p>
                 <p class="subtitle">Price: $84.99</p>
                 <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
@@ -252,8 +307,23 @@
     </div>
   </div>
 </div>
+<script src="./js/script.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/script.js"></script>
 <script src="js/members.js"></script>
 <script src="../ajaxCall.js"></script>
+<script>
+  $(document).ready(function() {
+
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function() {
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+
+  });
+});
+</script>
+
