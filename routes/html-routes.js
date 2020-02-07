@@ -32,4 +32,8 @@ module.exports = function(app) {
     // ../public/app.html
   });
 
+  app.get("/top50", isAuthenticated, function(req,res){
+    res.render(path.join(__dirname,"../views/top50items.handlebars"));
+  })
+
 };

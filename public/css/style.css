@@ -5,7 +5,13 @@
     background-size: cover;
     align-content: center;
 }
-
+#hero_picture2{
+    background-image: url(../images/gift2.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
+}
 #down_arrow {
     color: #363636!important;
     padding: 15px;
