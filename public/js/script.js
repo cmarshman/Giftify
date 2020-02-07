@@ -23,11 +23,12 @@ $(function () {
 
     console.log(inputVal);
 
+    // $("#inputInfo").trigger("reset");
 
     var newGift = {
       gift_name: $("#inputInfo").val(),
     };
-    // getDataFromEtsyApi();
+    getDataFromEtsyApi();
 
     // Send the POST request.
     $.ajax("/api/gifts", {
@@ -36,6 +37,7 @@ $(function () {
     }).then(
       function () {
         console.log("created new gift");
+        
         // Reload the page to get the updated list
         // location.reload();
       }
@@ -56,5 +58,11 @@ $(function () {
       }
     );
   });
+
+  $(".giftBtns").on("click", function (event) {
+    console.log("button working");
+    console.log($(this).html());
+    $("input:text").val($(this).html());
+  })
 
 });
