@@ -27,49 +27,20 @@ function getDataFromEtsyApi(searchTerm, callback) {
 function displayEtsySearchData(data) {
     for (var i = 0; i < data.results.length; i++) {
 
-        //  $('.subtitle').append(data.results[i].title)
-
-    // }
-    // console.log(data.results[i]);
-    // console.log(data.results[i].price);
-    // console.log(data.results[i].title);
-    // console.log(data.results[1].url);
-    // console.log(data.results[1].price);
-    
-    //displaying title as a link, opens in another tab
-    // var titleDisplay = $("<a>").text(data.results[i].title).attr("href", data.results[i].url).attr("target", "blank");
-    // $("#showResults").prepend(titleDisplay);
-
+    //displaying title as link
     var titleDisplay = $("<div>").append($("<a>").attr("href", data.results[i].url).text(data.results[i].title).css("display", "flex").css("align-items", "center").css("word-wrap", "break-word").attr("target", "_blank"));
 
+    //displaying picture to item
     var pictureDisplay = $("<div>").append($("<img>").attr("src", data.results[i].Images[0].url_fullxfull).attr("id", "pictures").css("clear", "both").css("margin-bottom", "10px").css("margin-right", "10px"));
 
+    //creating h3, displaying price
     var priceDisplay = $("<h3>").text("$" + data.results[i].price).css("text-align", "center");
 
+    //creating new div to insert into show results div
     var newDiv = $("<div>").attr("class", "tile is-child box notification is-light" + i).css("padding", "10px").css("width", "300px").css("margin", "0px 5px");
 
     $("#showResults").prepend(newDiv);
     $(newDiv).append(pictureDisplay, priceDisplay, titleDisplay);
-
-    // var imageDisplay = $("<div>").append($("<img>").attr("scr", data.results[1].Images[1].url_75x75).attr("id", "pictures").css("width", "96px"));
-    // console.log(imageDisplay);
-
-    // var newDiv = $("<div>");
-
-    // $(newDiv).append(imageDisplay);
-    // var picture = $("<img>").attr("src", data.results[i].Images[0].url_fullxfull);
-
-    // $("pictures").append(picture);
-    
-    
-
-    
-    // document.getElementById('showResults').text(data.results[1].title);
-
-    // titleDisplay = document.getElementById('inputInfo').value;
-    // console.log(titleDisplay);
-
-
 
         console.log(data);
 
@@ -84,6 +55,7 @@ function displayEtsySearchData(data) {
             searchTerm = document.getElementById('inputInfo').value;
             console.log(searchTerm);
             getDataFromEtsyApi(searchTerm, displayEtsySearchData);
+            $("#showResults").empty();
 
         })
     }
