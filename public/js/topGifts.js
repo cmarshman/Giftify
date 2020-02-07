@@ -1,5 +1,5 @@
-const algoliasearch = require("algoliasearch");
-const instantsearch = require("instantsearch")
+// const algoliasearch = require("algoliasearch");
+// const instantsearch = require("instantsearch")
 
 const searchClient = algoliasearch(
     '9LENV3M09M',
@@ -14,7 +14,11 @@ const searchClient = algoliasearch(
   search.addWidgets([
     instantsearch.widgets.searchBox({
       container: '#searchbox',
+      templates: {
+        item: `<input class="input is-rounded" type="text" placeholder="Enter a product name or category . . . ">`
+      }
     }),
+    
     instantsearch.widgets.hits({
       container: '#hits',
       hitsPerPage: 10,
@@ -22,7 +26,7 @@ const searchClient = algoliasearch(
         item: `
               <div class="hit">
               <div class="hit-image">
-              <img src="{{photo}}" alt="{{name}}" height="150" width="200"/>
+              <img src="{{photo}}" alt="{{name}}" height="200" width="200/>
                   <h3 class="hit-price">{{price}}</h3>
                   <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
                   <p class="hit-category">{{{_highlightResult.category.value}}}</p>
