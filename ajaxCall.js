@@ -3,7 +3,7 @@ const searchBtn = document.querySelector('#gift_search')
 
 
 function getDataFromEtsyApi(searchTerm, callback) {
-    var ETSY_BASE_URL = 'https://openapi.etsy.com/v2/listings/active.js?limit=10';
+    var ETSY_BASE_URL = 'https://openapi.etsy.com/v2/listings/active.js?limit=5';
     var ETSY_KEY = 'sg1y7p6kuosq2seimizzx5ml';
     
     var settings = {
@@ -39,12 +39,14 @@ function displayEtsySearchData(data) {
 
     var titleDisplay = $("<div>").append($("<a>").attr("href", data.results[i].url).text(data.results[i].title).css("display", "flex").css("align-items", "center").css("word-wrap", "break-word").attr("target", "_blank"));
 
-    var pictureDisplay = $("<div>").append($("<img>").attr("src", data.results[i].Images[0].url_fullxfull).attr("id", "pictures").css("width", "96px").css("clear", "both").css("margin-bottom", "10px").css("display", "inline-block").css("margin-right", "10px").css("@media screen and (max-width: 600px)", "{body {background-color: olive;}}"));
+    var pictureDisplay = $("<div>").append($("<img>").attr("src", data.results[i].Images[0].url_fullxfull).attr("id", "pictures").css("clear", "both").css("margin-bottom", "10px").css("margin-right", "10px"));
 
-    var newDiv = $("<div>").attr("id", "resultBlock" + i).css("display", "flex").css("padding", "1px");
+    var priceDisplay = $("<h3>").text("$" + data.results[i].price).css("text-align", "center");
 
-    $("#showResults").append(newDiv);
-    $(newDiv).append(pictureDisplay, titleDisplay);
+    var newDiv = $("<div>").attr("class", "tile is-child box notification is-light" + i).css("padding", "10px").css("width", "300px").css("margin", "0px 5px");
+
+    $("#showResults").prepend(newDiv);
+    $(newDiv).append(pictureDisplay, priceDisplay, titleDisplay);
 
     // var imageDisplay = $("<div>").append($("<img>").attr("scr", data.results[1].Images[1].url_75x75).attr("id", "pictures").css("width", "96px"));
     // console.log(imageDisplay);
