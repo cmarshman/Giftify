@@ -1,17 +1,18 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#search">
-        <p class="subtitle has-text-centered" id="text">Giftify</p>
-        
-      </a>
-  
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#search">
+      <p class="subtitle has-text-centered" id="text">Giftify</p>
+
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+      data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" href="/app">
@@ -35,7 +36,8 @@
         </div>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <section class="hero is-dark is-fullheight">
   <div class="hero-body" id="hero_picture">
@@ -58,7 +60,8 @@
           <section>
             <div class="field has-addons">
               <div class="control is-expanded">
-                <input class="input" id="inputInfo" onfocus="this.value=''" type="text" placeholder="Search for your unique gift here.">
+                <input class="input reset" id="inputInfo" onfocus="this.value=''" type="text"
+                  placeholder="Search for your unique gift here.">
               </div>
               <div class="control">
                 <button class="button is-black btnSearch" id="gift_search">
@@ -70,7 +73,7 @@
           <section>
             <br>
             <div id="recent">
-            <h1>Recent Searches</h1>
+              <h1>Recent Searches</h1>
             </div>
             <div class="field has-addons">
               <div class="control is-expanded">
@@ -85,7 +88,6 @@
               <li>
                 <p><span class="label">Gift:</span> {{gift_name}}</p>
 
-                {{!-- <button data-id="{{this.gift_name}}" class="giftAdded">{{this.gift_name}}</button> --}}
                 <button data-id="{{id}}" class="delgift">Delete</button>
               </li>
               {{/each}}
@@ -313,17 +315,18 @@
 <script src="js/script.js"></script>
 <script src="js/members.js"></script>
 <script src="../ajaxCall.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
-  $(document).ready(function() {
+  $(document).ready(function () {
 
-  // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function() {
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function () {
 
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
       $(".navbar-burger").toggleClass("is-active");
       $(".navbar-menu").toggleClass("is-active");
 
+    });
   });
-});
 </script>
-

@@ -51,9 +51,8 @@ module.exports = function (app) {
   app.get("/api/gifts", function (req, res) {
     // findAll returns all entries for a table when used with no options
     db.GiftList.findAll({}).then(function (result) {
-      var hbsObject = {
-        GiftList: data
-      };
+      res.json(result);
+
       console.log(hbsObject);
       res.render("search", hbsObject);
       });
