@@ -1,5 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
+var db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -11,7 +12,15 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.render(path.join(__dirname, "../views/index.handlebars"));
+
+    db.GiftList.findAll({}).then(function (data) {
+      // var hbsObject = {
+      //   GiftList: data
+      // };
+      // hbsObject
+      // console.log(hbsObject);
+      res.render("search",{GiftList: data});
+      });
     // ../public/signup.html
   });
 
