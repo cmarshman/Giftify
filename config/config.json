@@ -1,9 +1,10 @@
 {
     "development": {
       "username": "root",
-      "password": "johan123",
+      "password": "Gyolrs#31",
       "database": "gifts_db",
       "host": "127.0.0.1",
+      "operatorsAliases": 0,
       "dialect": "mysql"
     },
     "test": {
@@ -11,13 +12,15 @@
       "password": null,
       "database": "database_test",
       "host": "127.0.0.1",
-      "dialect": "mysql"
+      "dialect": "mysql",
+      "operatorsAliases": 1
     },
     "production": {
       "username": "root",
       "password": null,
       "database": "database_production",
       "host": "127.0.0.1",
-      "dialect": "mysql"
+      "dialect": "mysql",
+      "operatorsAliases": 1
     }
   }
