@@ -1,11 +1,14 @@
 //AJAX call for Esty API
+
+
 const searchBtn = document.querySelector('#gift_search')
+
 
 
 function getDataFromEtsyApi(searchTerm, callback) {
     var ETSY_BASE_URL = 'https://openapi.etsy.com/v2/listings/active.js?limit=5';
     var ETSY_KEY = 'sg1y7p6kuosq2seimizzx5ml';
-    
+
     var settings = {
         url: ETSY_BASE_URL,
         dataType: 'jsonp',
@@ -17,14 +20,14 @@ function getDataFromEtsyApi(searchTerm, callback) {
         },
         success: callback
     }
-    
+
     $.ajax(settings);
 };  
 //Show Esty results and loop through response object
 function displayEtsySearchData(data) {
     for (var i = 0; i < data.results.length; i++) {
 
-    //  $('.subtitle').append(data.results[i].title)
+        //  $('.subtitle').append(data.results[i].title)
 
     // }
     // console.log(data.results[i]);
@@ -68,19 +71,19 @@ function displayEtsySearchData(data) {
 
 
 
-    console.log(data);
+        console.log(data);
 
 }};
 
 
-if (searchBtn) {
+    if (searchBtn) {
 
-    searchBtn.addEventListener("click", function (event) {
+        searchBtn.addEventListener("click", function (event) {
 
-        event.preventDefault();
-        searchTerm = document.getElementById('inputInfo').value;
-        console.log(searchTerm);
-        getDataFromEtsyApi(searchTerm, displayEtsySearchData)
+            event.preventDefault();
+            searchTerm = document.getElementById('inputInfo').value;
+            console.log(searchTerm);
+            getDataFromEtsyApi(searchTerm, displayEtsySearchData);
 
-    })
-};
+        })
+    }
