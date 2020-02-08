@@ -55,7 +55,7 @@ function displayEtsySearchData(data) {
             searchTerm = document.getElementById('inputInfo').value;
             console.log(searchTerm);
             getDataFromEtsyApi(searchTerm, displayEtsySearchData);
-            // $("#showResults").empty();
+            $("#showResults").empty();
 
         })
     }
