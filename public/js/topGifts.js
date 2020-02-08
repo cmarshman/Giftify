@@ -14,8 +14,8 @@ const searchClient = algoliasearch(
   search.addWidgets([
     instantsearch.widgets.searchBox({
       container: '#searchbox',
-      templates: {
-        item: `<input class="input is-rounded" type="text" placeholder="Enter a product name or category . . . ">`
+      cssClasses: {
+        item: "item-custom-css-class",
       }
     }),
     
@@ -23,7 +23,7 @@ const searchClient = algoliasearch(
       container: '#hits',
       hitsPerPage: 10,
       templates: {
-        item: `
+        item:`
               <div class="hit">
               <div class="hit-image">
               <img src="{{photo}}" alt="{{name}}" height="200" width="200/>

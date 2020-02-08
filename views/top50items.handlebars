@@ -16,12 +16,12 @@
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item" href="/app">
-          Search
-        </a>
-  
-        <a class="navbar-item" href="/top50">
-          Top 50 Gifts
-        </a>
+        Search
+      </a>
+
+      <a class="navbar-item" href="/top50">
+        Top 50 Gifts
+      </a>
 
 
     </div>
@@ -29,7 +29,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-light">
+          <a class="button is-light" href="/logout">
             Log out
           </a>
         </div>
@@ -50,7 +50,8 @@
     <div class="tile is-parent">
       <article class="tile is-child notification is-dark">
         <h1 class="title banana" id="search">2019's most popular gifts</h1>
-        <h3>Search through 2019's most popular gifts, instantly. You can enter a product name or try searching by categories: Kids Toys, Big Kids, Home & Garden, Health & Wellness, or Technology.</h3>
+        <h3>Search through 2019's most popular gifts, instantly. You can enter a product name or try searching by
+          categories: Kids Toys, Big Kids, Home & Garden, Health & Wellness, or Technology.</h3>
         <div class="hero-body">
           <div class="container">
             <div class="search-panel">
@@ -68,6 +69,21 @@
   </div>
 </div>
 
-        <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.2.0"></script>
-        <script src="js/topGifts.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.2.0"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/topGifts.js"></script>
+
+<script>
+  $(document).ready(function () {
+
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function () {
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+
+    });
+  });
+</script>
