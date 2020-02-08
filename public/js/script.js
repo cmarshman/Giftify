@@ -39,7 +39,7 @@ $(function () {
         console.log("created new gift");
         
         // Reload the page to get the updated list
-        location.reload();
+        // location.reload();
       }
     );
   });
