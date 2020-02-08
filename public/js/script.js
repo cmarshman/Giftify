@@ -39,7 +39,7 @@ $(function () {
         
         // Reload the page to get the updated list
         // location.reload();
-        getDataFromEtsyApi(newGift.gift_name, displayEtsySearchData);
+        // getDataFromEtsyApi(newGift.gift_name, displayEtsySearchData);
       }
     );
   });
