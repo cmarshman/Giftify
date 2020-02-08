@@ -1,11 +1,11 @@
-<nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand" >
-    <a class="navbar-item" href="/app" id="menu-items">
-      <h3 class="subtitle has-text-centered" id="text">Giftify</h3>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#search">
+      <p class="subtitle has-text-centered" id="text">Giftify</p>
 
     </a>
 
-    <a role="button" class="navbar-burger burger" id="burger" aria-label="menu" aria-expanded="false"
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
       data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -15,11 +15,11 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="/app" id="menu-items">
+      <a class="navbar-item" href="/app">
         Search
       </a>
 
-      <a class="navbar-item" href="/top50" id="menu-items">
+      <a class="navbar-item" href="/top50">
         Top 50 Gifts
       </a>
 
@@ -29,12 +29,13 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-dark" href="/logout">
+          <a class="button is-light" href="/logout">
             Log out
           </a>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </nav>
 
@@ -42,25 +43,24 @@
   <div class="hero-body" id="hero_picture">
     <div class="container has-text-centered is-dark">
       <a class="is-pulled-left" href="#search">
-        <p class="subtitle has-text-centered" id="slide">
+        <p class="subtitle has-text-centered" id="text">
           <i class="fas fa-gift fa-7x" id="down_arrow"></i><br>Search for a Gift</p>
       </a>
     </div>
   </div>
 </section>
-<br id="search">
 <br>
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-11" id="tile">
     <div class="tile is-parent">
       <article class="tile is-child notification is-dark">
-        <h1 class="title banana">Search for a Gift</h1>
+        <h1 class="title banana" id="search">Search for a Gift</h1>
         <h3>Search for a unique gift for that special someone</h3>
         <div class="hero-body">
           <section>
             <div class="field has-addons">
               <div class="control is-expanded">
-                <input class="input" id="inputInfo" onfocus="this.value=''" type="text"
+                <input class="input reset" id="inputInfo" onfocus="this.value=''" type="text"
                   placeholder="Search for your unique gift here.">
               </div>
               <div class="control">
@@ -93,7 +93,10 @@
               {{/each}}
             </ul>
           </section>
-          <div class="tile is-parent" id="showResults">
+          <div class="tile is-parent" id="showResults1">
+            <div id="pictures"></div>
+          </div>
+          <div class="tile is-parent" id="showResults2">
             <div id="pictures"></div>
           </div>
         </div>
@@ -111,16 +114,16 @@
                 </figure>
                 <br>
                 <p class="subtitle">Apple AirPods</p>
-                <p id="or-log-in">After a simple one-tap setup, AirPods work like magic. They're automatically on and always connected.
+                <p>After a simple one-tap setup, AirPods work like magic. They're automatically on and always connected.
                   AirPods can even sense when they're in your ears and pause when you take them out.</p>
 
                 <div class="is-child">
-                  <br>
-                  <p class="subtitle">Price: $115.00<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                  </button></p>
+                  <p class="subtitle">Price: $115</p>
+                  <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                  </button>
                 </div>
-                <br>
               </article>
+
             </div>
             <div class="tile is-parent">
               <article class="tile is-child box notification is-light">
@@ -131,13 +134,12 @@
                 </figure>
                 <br>
                 <p class="subtitle">Insta Pot Pressure Cooker</p>
-                <p id="or-log-in">Cook a healthy dinner in minutes. The multicookers are electronically controlled, combined pressure
+                <p>Cook a healthy dinner in minutes. The multicookers are electronically controlled, combined pressure
                   cookers and slow cookers. Combines 6-in-1 to consolidate the cooking and preparing.
                 </p>
-                <br>
-                <p class="subtitle">Price: $84.99 <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p class="subtitle">Price: $84.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -149,12 +151,11 @@
                 </figure>
                 <br>
                 <p class="subtitle">Eufy Robovac 11s</p>
-                <p id="or-log-in">Eufy RoboVac 11c is a mart Wi-Fi robotic vacuum cleaner. All-New RoboVac, Re-engineered to be the
+                <p>Eufy RoboVac 11c is a mart Wi-Fi robotic vacuum cleaner. All-New RoboVac, Re-engineered to be the
                   slimmest RoboVac with increased suction at 1300Pa with quiet operation. BoostIQ Technology.</p>
-                <br>
-                <p class="subtitle">Price: $239.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p class="subtitle">Price: $239.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
           </div>
@@ -170,10 +171,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Away Suitcase</p>
-                <p id="or-log-in">Price: $ 279.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Away Suitcase</p>
+                <p>Price: $ 279.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -184,10 +185,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Gravity Blanket</p>
-                <p id="or-log-in">Price: $ 60.89<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Gravity Blanket</p>
+                <p>Price: $ 60.89</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -198,10 +199,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Kindle Paperwhite</p>
-                <p id="or-log-in">Price: 44.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Kindle Paperwhite</p>
+                <p>Price: 44.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -212,10 +213,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Staub 5.5 Cocotte</p>
-                <p id="or-log-in">Price: 275.95<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Staub 5.5 Cocotte</p>
+                <p>Price: 275.95</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -226,10 +227,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Fitbit Charge 3</p>
-                <p id="or-log-in">Price: 109.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Fitbit Charge 3</p>
+                <p>Price: 109.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
           </div>
@@ -245,10 +246,11 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Sonos One</p>
-                <p id="or-log-in">Price: 109.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Sonos One</p>
+                <p>Price: 109.99</p>
+
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -259,10 +261,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Ancestry DNA</p>
-                <p id="or-log-in">Price: 45.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Ancestry DNA</p>
+                <p>Price: 45.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -273,10 +275,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Echo Show</p>
-                <p id="or-log-in">Price: $59.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Echo Show</p>
+                <p>Price: $59.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -287,10 +289,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">InnoGear</p>
-                <p id="or-log-in">Price: 14.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>InnoGear</p>
+                <p>Price: 14.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
             <div class="tile is-parent">
@@ -301,10 +303,10 @@
                     allowfullscreen></iframe>
                 </figure>
                 <br>
-                <p id="or-log-in">Philips AirFryer</p>
-                <p id="or-log-in">Price: 199.99<button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
-                </button></p>
-                <br>
+                <p>Philips AirFryer</p>
+                <p>Price: 199.99</p>
+                <button class="button is-info is-hovered is-rounded is-pulled-right">Check Out
+                </button>
               </article>
             </div>
           </div>
@@ -316,11 +318,13 @@
 <script src="js/ajaxCall.js"></script>
 <script src="./js/script.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-{{!-- <script src="https://code.jquery.com/jquery.js"></script> --}}
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/members.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+{{!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> --}}
 <script>
   $(document).ready(function () {
 

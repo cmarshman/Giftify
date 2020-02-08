@@ -10,9 +10,9 @@ This application helps the user search for and buy the perfect gift for their sp
 
 
 ## Functionality
-This page uses two different third-party APIs (**Etsy** and **Algolia**). The Etsy API allows the user to search for items by a keyword, then displays the results directly on the home page. Once a term is searched, it is stored in a recent searches table, which will allow the user to click a button and return to that search.
+This page uses two different third-party APIs (**Etsy** and **Algolia**). The Etsy API allows the user to search for items by a keyword, then displays the results directly on the home page. Once a term is searched, it is stored in a recent searches table, which will allow the user to click a button and return to that search later.
 
-Algolia allows the user to search through a pre-defined array of gifts. It also serves as an auto-complete function, which will start displaying results as soon as the first key is typed.
+Algolia allows the user to search through a defined array of gifts. It also serves as an auto-complete function, which will start displaying results as soon as the first key is typed.
 
 Once the perfect gift is found, the gift-giver can click a link directing them to buy the item.
 
@@ -31,6 +31,14 @@ Once the perfect gift is found, the gift-giver can click a link directing them t
 ## Links
     * Deployed Application: https://giftify-project2.herokuapp.com/
     * Github Pages: https://github.com/cmarshman/project2
+
+
+## Images
+Login Page +++++++++++++++++++++++++++++++++++++
+![Login-Page] (public/images/login.gif)
+![Etsy-Search] (public/images/etsysearch.gif)
+![Most-Popular-Gifts] (public/images/mostpopular.gif)
+
 
 
 ## License
