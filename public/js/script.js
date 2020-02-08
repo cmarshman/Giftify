@@ -14,21 +14,21 @@ $(function () {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
     console.log("button working");
-
+    
     var inputVal = $("#inputInfo").val();
     var giftBtn = document.createElement("button");
-
+    
     giftBtn.innerHTML = inputVal;
     document.getElementById("giftVal").prepend(giftBtn);
-
+    
     console.log(inputVal);
-
-
+    
+    
     var newGift = {
       gift_name: $("#inputInfo").val(),
     };
-    getDataFromEtsyApi();
-
+    console.log('>>> test'); // TODO: Remove
+    
     // Send the POST request.
     $.ajax("/api/gifts", {
       type: "POST",
@@ -39,6 +39,7 @@ $(function () {
         
         // Reload the page to get the updated list
         // location.reload();
+        getDataFromEtsyApi(newGift.gift_name, displayEtsySearchData);
       }
     );
   });
@@ -53,7 +54,7 @@ $(function () {
       function () {
         console.log("deleted id ", id);
         // Reload the page to get the updated list
-        // location.reload();
+        location.reload();
       }
     );
   });

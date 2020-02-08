@@ -25,15 +25,15 @@ module.exports = function (app) {
     res.render(path.join(__dirname, "../public/login.handlebars"));
     // ../public/login.html
   });
-  app.get("/app", isAuthenticated, function (req, res) {
-    res.render(path.join(__dirname, "../public/search.handlebars"))
-  });
+  // app.get("/app", isAuthenticated, function (req, res) {
+  //   res.render(path.join(__dirname, "../public/search.handlebars"))
+  // });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/app", isAuthenticated, function (req, res) {
     db.GiftList.findAll({}).then(function (data) {
-      res.render("search", { GiftList: data });
+      res.render(path.join(__dirname, "../public/search.handlebars"), { GiftList: data });
     });
     // ../public/app.html
   });
