@@ -1,24 +1,39 @@
-#hero_picture {
+#menu_picture {
     background-image: url(../images/gift.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
     align-content: center;
 }
-#hero_picture2{
+#menu_picture2{
     background-image: url(../images/gift2.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
     align-content: center;
 }
+
 #down_arrow {
     color: #363636!important;
     padding: 15px;
 }
+
 #slide{
     color: #363636;
 }
+
+#productSelector{
+    cursor: pointer;
+}
+
+#displayURL {
+    background-color: #363636;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
 a {
     background-color: #f5f5f5;
     padding: 15px;
@@ -48,6 +63,7 @@ button {
     text-transform: capitalize;
     font-size: 25px;
 }
+
 #recent {
     font-size: 20px;
 }
@@ -58,7 +74,6 @@ button {
 }
 #or-log-in{
     color: #363636;
-    /* background-color: white!important; */
     border-radius: 0!important;
 }
 
@@ -72,4 +87,26 @@ button {
     background-color: black;
 }
 
+#second_hero{
+    background-image: url(../images/gift2.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
+}
 
+#third_hero{
+    background-image: url(../images/guinea-pig-gift.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
+}
+
+#fourth_hero{
+    background-image: url(../images/give-gift.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
+}
