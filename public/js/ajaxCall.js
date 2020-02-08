@@ -46,8 +46,6 @@ function displayEtsySearchData(data) {
 
     var newDiv = $("<div>").attr("class", "tile is-child box notification is-light" + i).attr("id", "resultDiv");
 
-    $("#showResults").prepend(newDiv);
-    $(newDiv).append(pictureDisplay, "<br>", titleDisplay, "<br>", priceDisplay);
 
     if (i >= 4) {
         $("#showResults1").prepend(newDiv);
