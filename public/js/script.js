@@ -23,7 +23,6 @@ $(function () {
 
     console.log(inputVal);
 
-    // $("#inputInfo").trigger("reset");
 
     var newGift = {
       gift_name: $("#inputInfo").val(),
@@ -62,7 +61,8 @@ $(function () {
   $(".giftBtns").on("click", function (event) {
     console.log("button working");
     console.log($(this).html());
+    // Ask about how to show just the value of the button and not the element as well
     $("input:text").val($(this).html());
-  })
+  });
 
 });

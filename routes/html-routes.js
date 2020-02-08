@@ -5,9 +5,9 @@ var db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
+module.exports = function (app) {
 
-  app.get("/", function(req, res) {
+  app.get("/", function (req, res) {
     // If the user already has an account send them to the app page
     if (req.user) {
       res.redirect("/app");
@@ -16,7 +16,7 @@ module.exports = function(app) {
     // ../public/signup.html
   });
 
-  app.get("/login", function(req, res) {
+  app.get("/login", function (req, res) {
     // If the user already has an account send them to the app page
     if (req.user) {
       res.redirect("/app");
@@ -25,20 +25,20 @@ module.exports = function(app) {
     res.render(path.join(__dirname, "../public/login.handlebars"));
     // ../public/login.html
   });
-  app.get("/app", isAuthenticated, function(req,res){
-    res.render(path.join(__dirname,"../public/search.handlebars"))
+  app.get("/app", isAuthenticated, function (req, res) {
+    res.render(path.join(__dirname, "../public/search.handlebars"))
   });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/app", isAuthenticated, function(req, res) {
+  app.get("/app", isAuthenticated, function (req, res) {
     db.GiftList.findAll({}).then(function (data) {
-      res.render("search",{GiftList: data});
-      });
+      res.render("search", { GiftList: data });
+    });
     // ../public/app.html
   });
-  
-  app.get("/top50", isAuthenticated, function(req,res){
-      res.render(path.join(__dirname,"../views/top50items.handlebars"));
-    });
-  }
+
+  app.get("/top50", isAuthenticated, function (req, res) {
+    res.render(path.join(__dirname, "../views/top50items.handlebars"));
+  });
+}
