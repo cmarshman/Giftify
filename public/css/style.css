@@ -111,16 +111,11 @@ button {
     align-content: center;
 }
 
+
 @media screen and (max-width: 1024px){
     #pictures{
        float: none!important;
        width: 50%!important;
-       /* background-color: red; */
+
     }
-
-    /* #pictures {
-        height: 400px!important;
-        width: 400px!important;
-    } */
-
 }
