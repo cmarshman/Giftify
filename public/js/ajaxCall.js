@@ -4,7 +4,7 @@ const searchBtn = document.querySelector('#gift_search')
 
 function getDataFromEtsyApi(searchTerm, callback) {
     console.log('>> in getdata'); // TODO: Remove
-    var ETSY_BASE_URL = 'https://openapi.etsy.com/v2/listings/active.js?limit=8';
+    var ETSY_BASE_URL = 'https://openapi.etsy.com/v2/listings/active.js?limit=6';
     var ETSY_KEY = 'sg1y7p6kuosq2seimizzx5ml';
     
     var settings = {
@@ -47,7 +47,7 @@ function displayEtsySearchData(data) {
     var newDiv = $("<div>").attr("class", "tile is-child box notification is-light" + i).attr("id", "resultDiv");
 
 
-    if (i >= 4) {
+    if (i >= 3) {
         $("#showResults1").prepend(newDiv);
         $(newDiv).append(pictureDisplay, "<br>", titleDisplay, "<br>", priceDisplay);
     }
