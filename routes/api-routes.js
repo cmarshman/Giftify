@@ -47,26 +47,25 @@ module.exports = function (app) {
     }
   });
 
-  // GET route for getting all of the todos
+  // GET route for getting all of the gifts
   app.get("/api/gifts", function (req, res) {
     // findAll returns all entries for a table when used with no options
     db.GiftList.findAll({}).then(function (result) {
-      // We have access to the giftsList as an argument inside of the callback function
       res.json(result);
-    });
+
+      console.log(hbsObject);
+      res.render("search", hbsObject);
+      });
   });
 
-  // POST route for saving a new todo
+  // POST route for saving a new gift
   app.post("/api/gifts", function (req, res) {
     console.log(req.body);
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
-    db.GiftList.create({
-      gift_name: req.body.gift_name
-    }).then(function (result) {
-      // We have access to the new giftlist as an argument inside of the callback function
-      res.json(result);
+    db.GiftList.create(req.body).then(function(dbGift) {
+      res.json(dbGift);
     });
   });
 
@@ -74,7 +73,7 @@ module.exports = function (app) {
   // req.params.id
   app.delete("/api/gifts/:id", function (req, res) {
     // We just have to specify which gift we want to destroy with "where"
-    db.GiftsList.destroy({
+    db.GiftList.destroy({
       where: {
         id: req.params.id
       }
