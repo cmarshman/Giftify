@@ -35,6 +35,3 @@ db.sequelize.sync().then(function() {
   });
 });
 
-// var orm = require("./config/orm.js");
-
-// orm.all("gift_name");
