@@ -16,11 +16,9 @@
     color: #363636!important;
     padding: 15px;
 }
-
-#text {
-    color: #363636
+#slide{
+    color: #363636;
 }
-
 a {
     background-color: #f5f5f5;
     padding: 15px;
@@ -30,6 +28,15 @@ a {
 
 #tile {
     margin: 0 auto;
+}
+
+#burger{
+    background-color: #363636;
+    color: #ffffff;
+}
+
+#burger:hover {
+    background-color: black;
 }
 
 button {
@@ -49,3 +56,20 @@ button {
     max-width: 100%;
     height: auto;
 }
+#or-log-in{
+    color: #363636;
+    /* background-color: white!important; */
+    border-radius: 0!important;
+}
+
+#menu-items{
+    color: white;
+    background-color: #363636;
+    border-radius: 0;
+}
+
+#menu-items:hover {
+    background-color: black;
+}
+
+
