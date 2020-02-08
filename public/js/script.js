@@ -15,11 +15,11 @@ $(function () {
     event.preventDefault();
     console.log("button working");
     
-    // var inputVal = $("#inputInfo").val();
-    // var giftBtn = document.createElement("button");
+    var inputVal = $("#inputInfo").val();
+    var giftBtn = document.createElement("button");
     
-    // giftBtn.innerHTML = inputVal;
-    // document.getElementById("giftVal").prepend(giftBtn);
+    giftBtn.innerHTML = inputVal;
+    document.getElementById("giftVal").prepend(giftBtn);
     
     console.log(inputVal);
     
@@ -27,7 +27,7 @@ $(function () {
     var newGift = {
       gift_name: $("#inputInfo").val(),
     };
-    getDataFromEtsyApi();
+    console.log('>>> test'); // TODO: Remove
     
     // Send the POST request.
     $.ajax("/api/gifts", {
@@ -39,6 +39,7 @@ $(function () {
         
         // Reload the page to get the updated list
         // location.reload();
+        getDataFromEtsyApi(newGift.gift_name, displayEtsySearchData);
       }
     );
   });

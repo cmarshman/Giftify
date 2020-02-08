@@ -82,15 +82,15 @@
             </div>
           </section>
           <section>
-            <ul>
+            <row>
               {{#each GiftList}}
-              <li>
+              <row>
                 <p><span class="label">Gift:</span> {{gift_name}}</p>
 
                 <button data-id="{{id}}" class="delgift">Delete</button>
-              </li>
+              </row>
               {{/each}}
-            </ul>
+            </row>
           </section>
           <div class="tile is-parent" id="showResults1">
             <div id="pictures"></div>

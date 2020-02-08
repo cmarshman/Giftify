@@ -3,6 +3,7 @@ const searchBtn = document.querySelector('#gift_search')
 
 
 function getDataFromEtsyApi(searchTerm, callback) {
+    console.log('>> in getdata'); // TODO: Remove
     var ETSY_BASE_URL = 'https://openapi.etsy.com/v2/listings/active.js?limit=8';
     var ETSY_KEY = 'sg1y7p6kuosq2seimizzx5ml';
     
