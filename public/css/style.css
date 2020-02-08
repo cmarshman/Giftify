@@ -52,6 +52,10 @@ button {
     font-size: 20px;
 }
 
+#pictures {
+    max-width: 100%;
+    height: auto;
+}
 #or-log-in{
     color: #363636;
     /* background-color: white!important; */
