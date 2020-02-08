@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand" >
     <a class="navbar-item" href="/app" id="menu-items">
       <h3 class="subtitle has-text-centered" id="text">Giftify</h3>
     </a>
     <a role="button" class="navbar-burger burger" id="burger" aria-label="menu" aria-expanded="false"
+=======
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#search">
+      <p class="subtitle has-text-centered" id="text">Giftify</p>
+
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+>>>>>>> 80788e8582c1e7d376797705358c5a06ee585263
       data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -13,11 +24,11 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="/app" id="menu-items">
+      <a class="navbar-item" href="/app">
         Search
       </a>
 
-      <a class="navbar-item" href="/top50" id="menu-items">
+      <a class="navbar-item" href="/top50">
         Top 50 Gifts
       </a>
 
@@ -27,12 +38,13 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-dark" href="/logout">
+          <a class="button is-light" href="/logout">
             Log out
           </a>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </nav>
 
@@ -40,26 +52,25 @@
   <div class="hero-body" id="menu_picture">
     <div class="container has-text-centered is-dark">
       <a class="is-pulled-left" href="#search">
-        <p class="subtitle has-text-centered" id="slide">
+        <p class="subtitle has-text-centered" id="text">
           <i class="fas fa-gift fa-7x" id="down_arrow"></i><br>Search for a Gift</p>
       </a>
     </div>
   </div>
 </section>
-<br id="search">
 <br>
 <br>
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-11" id="tile">
     <div class="tile is-parent">
       <article class="tile is-child notification is-dark">
-        <h1 class="title banana">Search for a Gift</h1>
+        <h1 class="title banana" id="search">Search for a Gift</h1>
         <h3>Search for a unique gift for that special someone</h3>
         <div class="hero-body">
           <section>
             <div class="field has-addons">
               <div class="control is-expanded">
-                <input class="input" id="inputInfo" onfocus="this.value=''" type="text"
+                <input class="input reset" id="inputInfo" onfocus="this.value=''" type="text"
                   placeholder="Search for your unique gift here.">
               </div>
               <div class="control">
@@ -92,7 +103,10 @@
               {{/each}}
             </ul>
           </section>
-          <div class="tile is-parent" id="showResults">
+          <div class="tile is-parent" id="showResults1">
+            <div id="pictures"></div>
+          </div>
+          <div class="tile is-parent" id="showResults2">
             <div id="pictures"></div>
           </div>
         </div>
@@ -317,8 +331,8 @@
 <script src="js/script.js"></script>
 <script src="js/members.js"></script>
 <script src="js/modals.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+{{!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> --}}
 <script>
   $(document).ready(function () {
 
