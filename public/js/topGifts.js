@@ -26,7 +26,7 @@ const searchClient = algoliasearch(
         item:`
               <div class="hit">
               <div class="hit-image">
-              <img src="{{photo}}" alt="{{name}}" height="200" width="200/>
+              <img src="{{photo}}" alt="{{name}}"/>
                   <h3 class="hit-price">{{price}}</h3>
                   <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
                   <p class="hit-category">{{{_highlightResult.category.value}}}</p>

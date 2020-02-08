@@ -1,0 +1,50 @@
+h2{
+    color: white!important;
+}
+h3{
+    color: white!important;
+}
+
+p{
+    color: white;
+}
+
+button {
+    background-color: #ffffff;
+    font-size: 15px;
+    border-radius: 25px;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
+
+svg{
+    display: none;
+}
+
+@media screen and (max-width: 1024px){
+    li{
+       float: none!important;
+       width: 50%!important;
+    }
+    img{
+        height: 400px!important;
+        width: 400px!important;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    li{
+       float: none!important;
+       width: 100%!important;
+    }
+    img{
+        height: 400px!important;
+        width: 400px!important;
+    }
+
+}
+
