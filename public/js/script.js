@@ -62,7 +62,7 @@ $(function () {
     console.log("button working");
     console.log($(this).html());
     // Ask about how to show just the value of the button and not the element as well
-    $("input:text").val($(this).html());
+    // $("input:text").val($(this).html());
   });
 
 });
