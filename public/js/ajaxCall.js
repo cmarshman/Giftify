@@ -37,25 +37,25 @@ function displayEtsySearchData(data) {
     // var titleDisplay = $("<a>").text(data.results[i].title).attr("href", data.results[i].url).attr("target", "blank");
     // $("#showResults").prepend(titleDisplay);
 
-    var titleDisplay = $("<div>").append($("<a>").attr("href", data.results[i].url).text(data.results[i].title).css("display", "flex").css("align-items", "center").css("word-wrap", "break-word").attr("target", "_blank"));
+    var titleDisplay = $("<div>").append($("<a>").attr("href", data.results[i].url).text("Purchase Here"));
 
-    var pictureDisplay = $("<div>").append($("<img>").attr("src", data.results[i].Images[0].url_fullxfull).attr("id", "pictures").css("clear", "both").css("margin-bottom", "10px").css("margin-right", "10px"));
+    var pictureDisplay = $("<div>").append($("<img>").attr("src", data.results[i].Images[0].url_fullxfull));
 
-    var priceDisplay = $("<h1>").text("$" + data.results[i].price).css("text-align", "center").css("color", "black!important");
+    var priceDisplay = $("<h1>").text("$" + data.results[i].price);
 
-    var newDiv = $("<div>").attr("class", "tile is-child box notification is-light" + i).attr("id", "resultDiv").css("padding", "10px").css("width", "300px").css("margin", "0px 5px");
+    var newDiv = $("<div>").attr("class", "tile is-child box notification is-light" + i).attr("id", "resultDiv");
 
     $("#showResults").prepend(newDiv);
-    $(newDiv).append(pictureDisplay, priceDisplay, titleDisplay);
+    $(newDiv).append(pictureDisplay, "<br>", titleDisplay, "<br>", priceDisplay);
 
     if (i >= 4) {
         $("#showResults1").prepend(newDiv);
-        $(newDiv).append(pictureDisplay, priceDisplay, titleDisplay);
+        $(newDiv).append(pictureDisplay, "<br>", titleDisplay, "<br>", priceDisplay);
     }
     else {
 
         $("#showResults2").prepend(newDiv);
-        $(newDiv).append(pictureDisplay, priceDisplay, titleDisplay);
+        $(newDiv).append(pictureDisplay, "<br>", titleDisplay, "<br>", priceDisplay);
     }
 
 
