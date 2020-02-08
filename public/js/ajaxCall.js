@@ -41,9 +41,9 @@ function displayEtsySearchData(data) {
 
     var pictureDisplay = $("<div>").append($("<img>").attr("src", data.results[i].Images[0].url_fullxfull).attr("id", "pictures").css("clear", "both").css("margin-bottom", "10px").css("margin-right", "10px"));
 
-    var priceDisplay = $("<h3>").text("$" + data.results[i].price).css("text-align", "center");
+    var priceDisplay = $("<h1>").text("$" + data.results[i].price).css("text-align", "center").css("color", "black!important");
 
-    var newDiv = $("<div>").attr("class", "tile is-child box notification is-light" + i).css("padding", "10px").css("width", "300px").css("margin", "0px 5px");
+    var newDiv = $("<div>").attr("class", "tile is-child box notification is-light" + i).attr("id", "resultDiv").css("padding", "10px").css("width", "300px").css("margin", "0px 5px");
 
     $("#showResults").prepend(newDiv);
     $(newDiv).append(pictureDisplay, priceDisplay, titleDisplay);
