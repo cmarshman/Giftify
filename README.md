@@ -18,7 +18,7 @@ Once the perfect gift is found, the gift-giver can click a link directing them t
 
 
 ## Contributions/Resources
-* Group Members: [Corey Marshman] (https://github.com/cmarshman), [Greg Roberts] (https://github.com/groberts31), [Johan Bueno] (https://github.com/johanbueno), and [JT Turner] (https://github.com/javierturner)
+* Group Members: [Cory Marshman] (https://github.com/cmarshman), [Greg Roberts] (https://github.com/groberts31), [Johan Bueno] (https://github.com/johanbueno), and [JT Turner] (https://github.com/javierturner)
 
 * Other Contributors: UNCC TAs, Rodney Brenes (Instructor)
 
@@ -35,9 +35,9 @@ Once the perfect gift is found, the gift-giver can click a link directing them t
 
 ## Images
 Login Page +++++++++++++++++++++++++++++++++++++
-![Login-Page] (public/images/login.gif)
-![Etsy-Search] (public/images/etsysearch.gif)
-![Most-Popular-Gifts] (public/images/mostpopular.gif)
+![Login-Page](public/images/login.gif)
+![Etsy-Search](public/images/etsysearch.gif)
+![Most-Popular-Gifts](public/images/mostpopular.gif)
 
 
 
